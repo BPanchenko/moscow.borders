@@ -1,0 +1,20 @@
+{
+  "name": "rocks.protosite.russia",
+	"description": "Russia Site",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "http://russia.protosite.rocks",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BPanchenko/rocks.protosite.russia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BPanchenko/rocks.protosite.russia/issues"
+  },
+  "author": {
+    "name": "Boris Panchenko",
+    "email": "boris.v.panchenko@mail.ru",
+    "url": "https://bpanchenko.ru"
+  }
+}
