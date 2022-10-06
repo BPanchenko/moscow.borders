@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: 'icon';
+    src: url('./glyphs.woff') format('woff'),
+         url('./glyphs.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon[data-glyph]::before {
+    font-family: 'glyphs';
+    display: inline-block;
+    speak: none;
+    line-height: 1;
+    vertical-align: baseline;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon[data-glyph]:empty::before {
+    width: 1em;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.icon[data-glyph=cloud-transfer-download]::before { content:'\e000'; }
