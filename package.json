@@ -1,20 +1,49 @@
 {
-  "name": "rocks.protosite.russia",
+	"name": "rocks.protosite.russia",
 	"description": "Russia Site",
-  "version": "0.0.0",
-  "private": true,
-  "homepage": "http://russia.protosite.rocks",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BPanchenko/rocks.protosite.russia.git"
-  },
-  "bugs": {
-    "url": "https://github.com/BPanchenko/rocks.protosite.russia/issues"
-  },
-  "author": {
-    "name": "Boris Panchenko",
-    "email": "boris.v.panchenko@mail.ru",
-    "url": "https://bpanchenko.ru"
-  }
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"main": "index.html",
+	"homepage": "http://russia.protosite.rocks",
+	"license": "ISC",
+	"scripts": {
+		"autobuild": "postcss ./design/main.css > ./assets/design.css --config ./.config/postcss.config.cjs --watch --verbose",
+		"build-css": "postcss ./design/main.css > ./assets/design.css --config ./.config/postcss.config.cjs",
+		"build-html": "posthtml --config ./.config/posthtml.config.cjs",
+		"dev": "run-s autobuild start",
+		"start": "node server.mjs"
+	},
+	"devDependencies": {
+		"@bpanchenko/uikit": "3.2.2",
+		"cssnano": "5.1.13",
+		"cssnano-preset-default": "5.2.12",
+		"d3": "7.6.1",
+		"express": "4.18.1",
+		"htmlnano": "2.0.2",
+		"livereload": "0.9.3",
+		"lodash": "4.17.21",
+		"npm-run-all": "4.1.5",
+		"postcss": "8.4.17",
+		"postcss-cli": "10.0.0",
+		"postcss-custom-media": "8.0.2",
+		"postcss-import": "15.0.0",
+		"postcss-nested": "5.0.6",
+		"posthtml": "0.16.6",
+		"posthtml-cli": "0.10.0",
+		"protosite-palette": "2.9.14",
+		"terser": "5.15.1"
+	},
+	"author": {
+		"name": "Boris Panchenko",
+		"email": "boris.v.panchenko@mail.ru",
+		"url": "https://bpanchenko.ru"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BPanchenko/rocks.protosite.russia.git"
+	},
+	"bugs": {
+		"url": "https://github.com/BPanchenko/rocks.protosite.russia/issues"
+	}
 }
