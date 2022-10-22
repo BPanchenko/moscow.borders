@@ -16,7 +16,7 @@
 		"watch-css": "postcss ./design/main.css --output ./assets/design.css --config ./.config/postcss.config.cjs --watch --verbose"
 	},
 	"devDependencies": {
-		"@bpanchenko/uikit": "3.5.12",
+		"@bpanchenko/uikit": "3.5.13",
 		"copyfiles": "2.4.1",
 		"cssnano": "5.1.13",
 		"cssnano-preset-default": "5.2.12",
@@ -33,9 +33,13 @@
 		"postcss-import": "15.0.0",
 		"postcss-nested": "6.0.0",
 		"posthtml": "0.16.6",
+		"posthtml-beautify": "0.7.0",
 		"posthtml-cli": "0.10.0",
+		"posthtml-match-helper": "1.0.3",
+		"posthtml-noopener": "1.0.5",
 		"protosite-core": "1.3.6",
 		"protosite-palette": "2.9.14",
+		"purgecss": "4.1.3",
 		"terser": "5.15.1"
 	},
 	"author": {
