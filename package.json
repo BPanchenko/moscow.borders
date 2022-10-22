@@ -8,12 +8,12 @@
 	"homepage": "http://russia.protosite.rocks",
 	"license": "ISC",
 	"scripts": {
-		"autobuild": "postcss ./design/main.css > ./assets/design.css --config ./.config/postcss.config.cjs --watch --verbose",
-		"build-css": "postcss ./design/main.css > ./assets/design.css --config ./.config/postcss.config.cjs",
+		"build-css": "postcss ./design/main.css --output ./assets/design.css --config ./.config/postcss.config.cjs --verbose",
 		"build-html": "posthtml --config ./.config/posthtml.config.cjs",
 		"copy-js": "copyfiles ./core/**/* ./assets && echo Copied core's scripts",
-		"dev": "run-s autobuild start",
-		"start": "node server.mjs"
+		"dev": "run-p watch-css start-server",
+		"start-server": "node server.mjs",
+		"watch-css": "postcss ./design/main.css --output ./assets/design.css --config ./.config/postcss.config.cjs --watch --verbose"
 	},
 	"devDependencies": {
 		"@bpanchenko/uikit": "3.5.12",
@@ -26,6 +26,7 @@
 		"livereload": "0.9.3",
 		"lodash": "4.17.21",
 		"npm-run-all": "4.1.5",
+		"port-authority": "2.0.1",
 		"postcss": "8.4.18",
 		"postcss-cli": "10.0.0",
 		"postcss-custom-media": "8.0.2",

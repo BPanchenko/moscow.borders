@@ -8,7 +8,7 @@ import serverConfig from "./.config/server.config.mjs"
 
 const config = {
 	domain: 'localhost',
-	root: '.',
+	root: '',
 	watch: '',
 	...serverConfig
 }
