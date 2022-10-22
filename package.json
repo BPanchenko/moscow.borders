@@ -11,11 +11,13 @@
 		"autobuild": "postcss ./design/main.css > ./assets/design.css --config ./.config/postcss.config.cjs --watch --verbose",
 		"build-css": "postcss ./design/main.css > ./assets/design.css --config ./.config/postcss.config.cjs",
 		"build-html": "posthtml --config ./.config/posthtml.config.cjs",
+		"copy-js": "copyfiles ./core/**/* ./assets && echo Copied core's scripts",
 		"dev": "run-s autobuild start",
 		"start": "node server.mjs"
 	},
 	"devDependencies": {
 		"@bpanchenko/uikit": "3.5.12",
+		"copyfiles": "2.4.1",
 		"cssnano": "5.1.13",
 		"cssnano-preset-default": "5.2.12",
 		"d3": "7.6.1",
