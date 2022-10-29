@@ -7,11 +7,14 @@ const root = '.'
 const plugins = []
 
 if (isProd) {
-	plugins.push(inlineAssets)
+	plugins.push(
+		inlineAssets,
+		removeDevTags
+	)
 }
 
 plugins.push(
-	cleanup,
+	updatePaths,
 	require("htmlnano")({ removeComments: 'all' }),
 	require("posthtml-noopener").noopener(),
 	require("posthtml-beautify")(require("./posthtml-beautify.config.cjs"))
@@ -51,25 +54,28 @@ function inlineAssets(tree) {
 	})
 }
 
-function cleanup(tree) {
-	tree
-		.match([{
-			attrs: { 'data-env': 'dev' }
-		}], node => ({ tag: false }))
-		.match([
-				selector("[href^='./assets/']"),
-				selector("[src^='./assets/']")
-			],
-			node => {
-				if (typeof node.attrs.src === 'string') {
-					node.attrs.src = node.attrs.src.replace('/assets/', '/')
-				}
-				if (typeof node.attrs.href === 'string') {
-					node.attrs.href = node.attrs.href.replace('/assets/', '/')
-				}
-				return node
+function removeDevTags(tree) {
+	tree.match([{
+		attrs: { 'data-env': 'dev' }
+	}], () => ({ tag: false }))
+}
+
+function updatePaths(tree) {
+	tree.match(
+		[
+			selector("[href^='./assets/']"),
+			selector("[src^='./assets/']")
+		],
+		node => {
+			if (typeof node.attrs.src === 'string') {
+				node.attrs.src = node.attrs.src.replace('/assets/', '/')
 			}
-		)
+			if (typeof node.attrs.href === 'string') {
+				node.attrs.href = node.attrs.href.replace('/assets/', '/')
+			}
+			return node
+		}
+	)
 }
 
 module.exports = {
