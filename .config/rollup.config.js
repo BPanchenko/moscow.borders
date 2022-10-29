@@ -1,7 +1,7 @@
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import { terser } from "rollup-plugin-terser"
 
-const IS_PROD = !process.env.ROLLUP_WATCH
+const isProd = process.env.NODE_ENV === 'production'
 
 export default {
 	input: 'core/main.mjs',
@@ -15,7 +15,7 @@ export default {
 			browser: true,
 			dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
 		}),
-		IS_PROD && terser({
+		isProd && terser({
 			module: true
 		})
 	]
