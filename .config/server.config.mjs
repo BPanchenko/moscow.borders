@@ -7,5 +7,5 @@ export default {
 		client: 8080,
 		livereload: 35729
 	},
-	watch: ['.snippets', 'assets', 'core', 'design']
+	watch: 'assets'
 }
