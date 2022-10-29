@@ -2,9 +2,3 @@
 @import "@bpanchenko/uikit/components/field.css";
 @import "@bpanchenko/uikit/objects/container.css";
 @import "@bpanchenko/uikit/utilities/main.css";
-
-.o-map {
-	display: block;
-	width: 83.2rem;
-	height: 44.8rem;
-}

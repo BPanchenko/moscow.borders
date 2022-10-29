@@ -1,0 +1,5 @@
+.o-header {
+	&__col:nth-child(1) {}
+	&__col:nth-child(2) {}
+	&__col:nth-child(3) {}
+}

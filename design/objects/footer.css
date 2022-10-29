@@ -1,0 +1,4 @@
+.o-footer {
+	&__col:nth-child(1) {}
+	&__col:nth-child(2) {}
+}

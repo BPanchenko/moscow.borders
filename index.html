@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
 
-        <title itemprop="headline">Исходники для карты России</title>
+        <title itemprop="headline">Границы России в векторе</title>
         <meta name="author" content="Boris Panchenko, boris.v.panchenko@mail.ru">
         <meta name="copyright" content="Boris Panchenko, 2022">
 
@@ -19,8 +19,31 @@
 
     </head>
     <body>
+		<header class="o-header">
+			<div class="o-header__col">
+				<img src="./pictures/emblem.svg" class="c-picture" alt="герб Российской Федерации">
+			</div>
+			<div class="o-header__col">
+				<img src="./pictures/flag.svg" class="c-picture" alt="флаг Российской Федерации">
+			</div>
+			<div class="o-header__col">
+				<h1>Административно-территориальные границы Российской Федерации в векторе</h1>
+			</div>
+		</header>
         <main class="o-container">
 			<o-map data-url="./assets/russia.geojson"></o-map>
 		</main>
+		<footer class="o-footer">
+			<hr>
+			<div class="o-footer__col"></div>
+			<div class="o-footer__col">
+				<span class="s-cursive u-text-large">
+					&copy;
+					<a href="https://bpanchenko.ru" class="s-floating u-text-color">
+						Сделано в Красногорске
+					</a>, 2022
+				</span>
+			</div>
+		</footer>
     </body>
 </html>
