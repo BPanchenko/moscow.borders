@@ -15,12 +15,12 @@ const CLS = Object.freeze({
  ========================================================================== */
 
 class DataProvider extends EventEmmiter {
-	#data = {}
+	#data
 	#url
 
 	constructor({ url }) {
 		super()
-		this.#url = new URL(url, window.location.origin)
+		this.url = url
 	}
 
 	fetch() {
@@ -32,6 +32,7 @@ class DataProvider extends EventEmmiter {
 					data: this.features
 				})
 			})
+			.catch(error => console.error(error))
 	}
 
 	isEmpty() {
@@ -40,6 +41,16 @@ class DataProvider extends EventEmmiter {
 
 	get features() {
 		return this.isEmpty() ? [] : this.#data.features
+	}
+
+	set url(value) {
+		const previos = this.#url
+		this.#url = new URL(value, window.location.origin)
+		this.trigger('change:url', {
+			target: this,
+			value: this.#url,
+			previos
+		})
 	}
 }
 
@@ -69,6 +80,14 @@ class MapObjectElement extends HTMLElement {
 		this.#resizeObserver = new ResizeObserver(entries => this.update())
 	}
 
+	attributeChangedCallback(name, value, previos) {
+		switch (name) {
+			case 'data-url':
+				this.#data.url = value
+				this.#data.fetch()
+		}
+	}
+
 	connectedCallback() {
 		this.classList.add(CLS.container)
 		
@@ -87,6 +106,10 @@ class MapObjectElement extends HTMLElement {
 			.data(this.#data.features)
 			.enter().append('path')
 			.attr('d', this.#path)
+	}
+
+	static get observedAttributes() {
+		return ['data-url']
 	}
 }
 
