@@ -2,3 +2,12 @@
 @import "@bpanchenko/uikit/components/field.css";
 @import "@bpanchenko/uikit/objects/container.css";
 @import "@bpanchenko/uikit/utilities/main.css";
+@import "@bpanchenko/uikit/styles/shadow.css";
+
+@import "./objects/header.css";
+
+@import "./components/picture.css";
+
+body {
+	background-color: var(--clr-green-grey-50);
+}
