@@ -1,0 +1,30 @@
+
+/*img*/
+.c-picture {
+	contain: content;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 15.2rem;
+	height: 15.2rem;
+	vertical-align: bottom;
+
+	object-fit: contain;
+	overflow: hidden;
+
+	background-color: transparent;
+	box-sizing: border-box;
+
+	margin: 0;
+	padding: 0;
+}
+
+.c-picture[src$='emblem.svg'] {
+	width: 8.6rem;
+	height: 8.6rem;
+}
+
+.c-picture[src$='flag.svg'] {
+	width: 13rem;
+	height: 8.6rem;
+}
