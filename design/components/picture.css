@@ -18,13 +18,3 @@
 	margin: 0;
 	padding: 0;
 }
-
-.c-picture[src$='emblem.svg'] {
-	width: 8.6rem;
-	height: 8.6rem;
-}
-
-.c-picture[src$='flag.svg'] {
-	width: 13rem;
-	height: 8.6rem;
-}
