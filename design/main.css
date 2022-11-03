@@ -3,10 +3,25 @@
 @import "@bpanchenko/uikit/objects/container.css";
 @import "@bpanchenko/uikit/utilities/main.css";
 @import "@bpanchenko/uikit/styles/shadow.css";
+@import "@bpanchenko/uikit/styles/floating.css";
 
+
+/* Custom Modules
+ ======================================================================== */
+
+@import url("http://assets.protosite.rocks/fonts/itc-franklin-gothic/stylesheet.css");
 @import "./objects/header.css";
-
 @import "./components/picture.css";
+
+/* Reset Typeface Settings
+ ======================================================================== */
+
+:root {
+	--font-secondary: 'ITCFranklinGothicWebMedium', sans-serif;
+}
+
+/* Document
+ ======================================================================== */
 
 body {
 	background-color: var(--clr-green-grey-50);
