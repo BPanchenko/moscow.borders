@@ -1,5 +1,9 @@
 .o-header {
-	&__col:nth-child(1) {}
-	&__col:nth-child(2) {}
-	&__col:nth-child(3) {}
+	display: grid;
+	grid-template-columns: 12.8rem 19.6rem 1fr;
+
+	h1 {
+		font-size: 2.4rem;
+		line-height: 1.2;
+	}
 }
