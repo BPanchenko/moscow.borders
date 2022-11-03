@@ -69,10 +69,9 @@ class MapObjectElement extends HTMLElement {
 
 	constructor() {
 		super()
-
+		
 		this.#data = new DataProvider({ ...this.dataset })
 		this.#data.on('sync', () => this.update())
-		this.#data.fetch()
 
 		this.#projection = geoMercator()
 		this.#path = geoPath().projection(this.#projection)
@@ -80,7 +79,7 @@ class MapObjectElement extends HTMLElement {
 		this.#resizeObserver = new ResizeObserver(entries => this.update())
 	}
 
-	attributeChangedCallback(name, value, previos) {
+	attributeChangedCallback(name, previos, value) {
 		switch (name) {
 			case 'data-url':
 				this.#data.url = value
