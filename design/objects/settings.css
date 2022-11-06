@@ -2,4 +2,6 @@
 	display: block;
 	width: 32rem;
 	height: 38.4rem;
+
+	outline: 1px dashed purple;
 }
