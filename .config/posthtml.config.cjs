@@ -63,6 +63,7 @@ function removeDevTags(tree) {
 function updatePaths(tree) {
 	tree.match(
 		[
+			selector("[data-url^='./assets/']"),
 			selector("[href^='./assets/']"),
 			selector("[src^='./assets/']")
 		],
@@ -72,6 +73,9 @@ function updatePaths(tree) {
 			}
 			if (typeof node.attrs.href === 'string') {
 				node.attrs.href = node.attrs.href.replace('/assets/', '/')
+			}
+			if (typeof node.attrs['data-url'] === 'string') {
+				node.attrs['data-url'] = node.attrs['data-url'].replace('/assets/', '/')
 			}
 			return node
 		}
