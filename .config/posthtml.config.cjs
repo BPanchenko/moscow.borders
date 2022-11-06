@@ -8,7 +8,7 @@ const plugins = []
 
 if (isProd) {
 	plugins.push(
-		inlineAssets,
+		// inlineCSS,
 		removeDevTags
 	)
 }
@@ -20,7 +20,7 @@ plugins.push(
 	require("posthtml-beautify")(require("./posthtml-beautify.config.cjs"))
 )
 
-function inlineAssets(tree) {
+function inlineCSS(tree) {
 	return new Promise(resolve => {
 		tree.match({
 			tag: 'link',
