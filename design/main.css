@@ -10,7 +10,10 @@
  ======================================================================== */
 
 @import url("http://assets.protosite.rocks/fonts/itc-franklin-gothic/stylesheet.css");
+@import "./objects/footer.css";
 @import "./objects/header.css";
+@import "./objects/map.css";
+@import "./objects/settings.css";
 @import "./components/picture.css";
 
 /* Reset Typeface Settings
