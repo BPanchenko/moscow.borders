@@ -1,4 +1,4 @@
-import { geoMercator, geoPath, select } from "d3"
+import { geoAlbers, geoPath, select } from "d3"
 
 import EventEmmiter from "protosite-core/lib/event-emmiter.js"
 import isEmpty from "lodash/isEmpty.js"
@@ -73,7 +73,10 @@ class MapObjectElement extends HTMLElement {
 		this.#data = new DataProvider({ ...this.dataset })
 		this.#data.on('sync', () => this.update())
 
-		this.#projection = geoMercator()
+		this.#projection = geoAlbers().rotate([-105, 0])
+			.center([-10, 65])
+			.parallels([52, 64])
+
 		this.#path = geoPath().projection(this.#projection)
 
 		this.#resizeObserver = new ResizeObserver(entries => this.update())
@@ -100,6 +103,13 @@ class MapObjectElement extends HTMLElement {
 		this.#height = this.offsetHeight
 		this.#width = this.offsetWidth
 		this.#svg.attr('width', this.#width).attr('height', this.#height)
+
+		this.#projection
+			.scale(610)
+			.translate([
+				this.#width/2,
+				this.#height/2
+			])
 
 		this.#svg.selectAll('path')
 			.data(this.#data.features)
