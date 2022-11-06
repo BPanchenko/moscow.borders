@@ -73,7 +73,8 @@ class MapObjectElement extends HTMLElement {
 		this.#data = new DataProvider({ ...this.dataset })
 		this.#data.on('sync', () => this.update())
 
-		this.#projection = geoAlbers().rotate([-105, 0])
+		this.#projection = geoAlbers()
+			.rotate([-105, 0])
 			.center([-10, 65])
 			.parallels([52, 64])
 
