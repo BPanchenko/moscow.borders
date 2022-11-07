@@ -1,11 +1,11 @@
 {
-	"name": "rocks.protosite.russia",
+	"name": "rocks.protosite.russia-map",
 	"description": "Russia Site",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"private": true,
 	"type": "module",
 	"main": "index.html",
-	"homepage": "http://russia.protosite.rocks",
+	"homepage": "http://russia-map.protosite.rocks",
 	"license": "ISC",
 	"scripts": {
 		"build": "set NODE_ENV=production&& run-s build:js build:css build:html",
@@ -56,9 +56,6 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/BPanchenko/rocks.protosite.russia.git"
-	},
-	"bugs": {
-		"url": "https://github.com/BPanchenko/rocks.protosite.russia/issues"
+		"url": "git+https://github.com/BPanchenko/rocks.protosite.russia-map.git"
 	}
 }
