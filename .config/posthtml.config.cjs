@@ -8,7 +8,7 @@ const plugins = []
 
 if (isProd) {
 	plugins.push(
-		// inlineCSS,
+		inlineCSS,
 		removeDevTags
 	)
 }
@@ -33,7 +33,13 @@ function inlineCSS(tree) {
 				css: [source],
 				rejected: true,
 				rejectedCss: true,
-				// safelist: [/^u-/],
+				safelist: [
+					/^\.c-picture/,
+					/^\.o-footer/,
+					/^\.o-header/,
+					/^\.o-map/,
+					/^\.o-settings/
+				],
 				variables: true
 			}).then(([ result ]) => {
 				console.log({
