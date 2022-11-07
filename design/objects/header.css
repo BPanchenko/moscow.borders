@@ -10,16 +10,16 @@
 		font-size: 2.4rem;
 		font-weight: normal;
 	}
-}
 
-/* Pictures */
-
-.c-picture[src$='emblem.svg'] {
-	width: 8.6rem;
-	height: 8.6rem;
-}
-
-.c-picture[src$='flag.svg'] {
-	width: 13rem;
-	height: 8.6rem;
+	/* Pictures */
+	
+	.c-picture--emblem {
+		width: 8.6rem;
+		height: 8.6rem;
+	}
+	
+	.c-picture--flag {
+		width: 13rem;
+		height: 8.6rem;
+	}
 }

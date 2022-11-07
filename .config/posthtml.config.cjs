@@ -14,6 +14,11 @@ if (isProd) {
 }
 
 plugins.push(
+	require("posthtml-inline-svg")({
+		cwd: path.resolve('.'),
+		tag: 'img',
+		attr: 'src'
+	}),
 	updatePaths,
 	require("htmlnano")({ removeComments: 'all' }),
 	require("posthtml-noopener").noopener(),
