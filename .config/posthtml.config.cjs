@@ -38,13 +38,6 @@ function inlineCSS(tree) {
 				css: [source],
 				rejected: true,
 				rejectedCss: true,
-				safelist: [
-					/^\.c-picture/,
-					/^\.o-footer/,
-					/^\.o-header/,
-					/^\.o-map/,
-					/^\.o-settings/
-				],
 				variables: true
 			}).then(([ result ]) => {
 				console.log({

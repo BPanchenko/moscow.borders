@@ -5,16 +5,17 @@
 @import "@bpanchenko/uikit/styles/shadow.css";
 @import "@bpanchenko/uikit/styles/floating.css";
 
+/* purgecss start ignore */
 
 /* Custom Modules
  ======================================================================== */
 
 @import url("http://assets.protosite.rocks/fonts/itc-franklin-gothic/stylesheet.css");
+@import "./components/picture.css";
 @import "./objects/footer.css";
 @import "./objects/header.css";
 @import "./objects/map.css";
 @import "./objects/settings.css";
-@import "./components/picture.css";
 
 /* Reset Typeface Settings
  ======================================================================== */
@@ -29,3 +30,5 @@
 body {
 	background-color: var(--clr-green-grey-50);
 }
+
+/* purgecss end ignore */
