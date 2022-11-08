@@ -1,9 +1,10 @@
 import fs from "fs"
 import path from "path"
+import properties from "../source/geo/properties.js"
 import { union } from "@turf/turf"
 
-const SOURCE = path.resolve('./assets/russia-regions.geojson')
-const DIST = path.resolve('./assets/russia.geojson')
+const SOURCE = path.resolve([process.cwd(), './assets/russia-regions.min.geojson'])
+const DIST = path.resolve([process.cwd(), './assets/russia.min.geojson'])
 
 // reading
 
@@ -26,10 +27,7 @@ for (var i = 1, len = features.length; i < len; i++) {
 
 unionFeature = {
 	...unionFeature,
-	properties: {
-		code: 'RU',
-		name: 'Российская Федерация'
-	}
+	properties: properties.ru
 }
 features = [unionFeature]
 geojson = {
