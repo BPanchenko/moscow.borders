@@ -2,8 +2,8 @@ import fs from "fs"
 import path from "path"
 import { union } from "@turf/turf"
 
-const SOURCE = path.resolve('./assets/russia-with-regions.min.geojson')
-const DIST = path.resolve('./assets/russia.min.geojson')
+const SOURCE = path.resolve('./assets/russia-regions.geojson')
+const DIST = path.resolve('./assets/russia.geojson')
 
 // reading
 
