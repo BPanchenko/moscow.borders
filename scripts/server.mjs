@@ -4,7 +4,7 @@ import childProcess from "child_process"
 import express from "express"
 import livereload from "livereload"
 import path from "path"
-import serverConfig from "./.config/server.config.mjs"
+import serverConfig from "../.config/server.config.mjs"
 
 const config = {
 	domain: 'localhost',
