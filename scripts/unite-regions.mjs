@@ -3,8 +3,8 @@ import path from "path"
 import properties from "../source/geo/properties.js"
 import { union } from "@turf/turf"
 
-const SOURCE = path.resolve([process.cwd(), './assets/russia-regions.min.geojson'])
-const DIST = path.resolve([process.cwd(), './assets/russia.min.geojson'])
+const SOURCE = path.resolve(process.cwd(), './assets/russia-regions.min.geojson')
+const DIST = path.resolve(process.cwd(), './assets/russia.min.geojson')
 
 // reading
 
