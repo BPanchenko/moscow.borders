@@ -1,11 +1,11 @@
 {
-	"name": "rocks.protosite.russia-map",
-	"description": "Russia Site",
+	"name": "rocks.protosite.russia-border",
+	"description": "Russia Border Site",
 	"version": "0.1.0",
 	"private": true,
 	"type": "module",
 	"main": "index.html",
-	"homepage": "http://russia-map.protosite.rocks",
+	"homepage": "http://russia-border.protosite.rocks",
 	"license": "ISC",
 	"scripts": {
 		"build": "set NODE_ENV=production&& run-s build:js build:css build:html",
@@ -56,6 +56,6 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/BPanchenko/rocks.protosite.russia-map.git"
+		"url": "git+https://github.com/BPanchenko/rocks.protosite.russia-border.git"
 	}
 }
