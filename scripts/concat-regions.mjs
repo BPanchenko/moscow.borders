@@ -23,7 +23,8 @@ filenames.forEach(filename => {
 		let props = properties[code] ?? defaultProps
 
 		let rawdata = fs.readFileSync(path.join(SOURCE, filename))
-		let feature = JSON.parse(rawdata)
+		let file_fc = JSON.parse(rawdata).features
+		let feature = file_fc[0]
 
 		feature.properties = {
 			...props,
