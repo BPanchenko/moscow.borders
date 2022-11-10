@@ -3,23 +3,11 @@
 
 .o-header {
 	display: grid;
-	grid-template-columns: 12.8rem 19.6rem 1fr;
+	grid-template-columns: 19.6rem 1fr;
 
 	h1 {
 		line-height: 1.2;
 		font-size: 2.4rem;
 		font-weight: normal;
-	}
-
-	/* Pictures */
-	
-	.c-picture--emblem {
-		width: 8.6rem;
-		height: 8.6rem;
-	}
-	
-	.c-picture--flag {
-		width: 13rem;
-		height: 8.6rem;
 	}
 }

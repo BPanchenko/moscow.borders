@@ -1,0 +1,22 @@
+/*figure*/
+.c-flag {
+	position: relative;
+	display: block;
+	width: 13rem;
+	height: 8.6rem;
+
+	.c-picture--emblem {
+		position: absolute;
+		z-index: 2;
+		top: 1.1rem;
+		left: 3.3rem;
+
+		width: 6.4rem;
+		height: 6.4rem;
+	}
+	
+	.c-picture--flag {
+		width: inherit;
+		height: inherit;
+	}
+}
