@@ -1,6 +1,6 @@
 import fs from "fs"
 import path from "path"
-import properties from "../source/geo/properties.js"
+import properties from "../source/geo/regions.js"
 import { union } from "@turf/turf"
 
 const SUFFIX = '.min'
