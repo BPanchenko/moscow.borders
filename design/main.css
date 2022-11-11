@@ -1,9 +1,4 @@
-@import "@bpanchenko/uikit/document/main.css";
-@import "@bpanchenko/uikit/components/field.css";
-@import "@bpanchenko/uikit/objects/container.css";
-@import "@bpanchenko/uikit/utilities/main.css";
-@import "@bpanchenko/uikit/styles/shadow.css";
-@import "@bpanchenko/uikit/styles/floating.css";
+@import "@bpanchenko/uikit/main.css";
 
 /* purgecss start ignore */
 
