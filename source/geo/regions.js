@@ -1,9 +1,3 @@
-
-export const defaultProps = {
-	code: '',
-	name: ''
-}
-
 export default {
 	'ru': {
 	  code: 'RU',
