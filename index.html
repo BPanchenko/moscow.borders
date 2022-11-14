@@ -31,9 +31,9 @@
 			</div>
 		</header>
         <main>
-			<div class="o-container">
-				<c-map data-url="./assets/russia-regions.min.geojson"></c-map>
-				<section class="o-settings">
+			<section class="o-map js-map">
+				<c-map data-url="./assets/russia-regions.min.geojson" class="o-map__display js-map-display"></c-map>
+				<section class="o-map__settings js-map-settings">
 					<label>
 						Проекция:
 						<select name="projection">
@@ -50,8 +50,8 @@
 						границы регионов России
 					</label>
 				</section>
-			</div>
-			<section>
+			</section>
+			<section class="o-cloud js-cloud">
 				<span>
 					<i class="icon" data-glyph="cloud-transfer-download"></i>
 					Скачать
