@@ -109,7 +109,6 @@ class MapComponentElement extends HTMLElement {
 	}
 
 	attributeChangedCallback(name, previos, value) {
-		console.log(name)
 		switch (name) {
 			case 'data-projection':
 				this.projection.init()
