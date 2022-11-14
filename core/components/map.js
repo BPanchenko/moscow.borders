@@ -7,8 +7,8 @@ import isEmpty from "lodash/isEmpty.js"
  ========================================================================== */
 
 const CLS = Object.freeze({
-	container: 'o-map',
-	svg: 'o-map__plot'
+	container: 'c-map',
+	svg: 'c-map__plot'
 })
 
 /* GeoJSON Data Container
@@ -58,7 +58,7 @@ class DataProvider extends EventEmmiter {
 /* Custom Element
  ========================================================================== */
 
-class MapObjectElement extends HTMLElement {
+class MapComponentElement extends HTMLElement {
 	#data
 	#path
 	#projection
@@ -123,9 +123,9 @@ class MapObjectElement extends HTMLElement {
 	}
 }
 
-customElements.define('o-map', MapObjectElement)
+customElements.define('c-map', MapComponentElement)
 
 
 export {
-	MapObjectElement
+	MapComponentElement
 }
