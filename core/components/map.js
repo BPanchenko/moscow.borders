@@ -131,6 +131,8 @@ class MapComponentElement extends HTMLElement {
 	}
 
 	update() {
+		if (!this.#svg) return // updating can call after preloading data and before mounting
+
 		this.#width = this.offsetWidth
 		this.#height = this.offsetHeight
 		this.#svg.attr('width', this.#width).attr('height', this.#height)
