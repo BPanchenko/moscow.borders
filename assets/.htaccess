@@ -27,6 +27,6 @@ RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     <ifModule mod_headers.c>
         Header unset ETag
         Header set Cache-Control "max-age=604800, public"
-        Header set Last-Modified "Thu, 27 November 2022 14:00:00 GMT+0300"
+        Header set Last-Modified "Thu, 27 November 2022 15:00:00 GMT+0300"
     </ifModule>
 </FilesMatch>
