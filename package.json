@@ -1,25 +1,25 @@
 {
 	"name": "moscow.borders",
 	"description": "Russia Border Site",
-	"version": "0.4.6",
+	"version": "0.4.7",
 	"private": true,
 	"type": "module",
 	"main": "index.html",
-	"homepage": "http://borders.moscow",
+	"homepage": "https://borders.moscow",
 	"license": "ISC",
 	"scripts": {
 		"build": "set NODE_ENV=production&& run-s build:js build:css build:html",
 		"build:css": "postcss ./design/main.css --output ./assets/design.css --config ./.config/postcss.config.cjs --verbose",
 		"build:html": "posthtml --config ./.config/posthtml.config.cjs",
 		"build:js": "rollup --config .config/rollup.config.js",
+		"dev": "set NODE_ENV=development&& run-p watch:js watch:css start:server",
 		"geo": "run-s geo:regions geo:country",
 		"geo:country": "node scripts/unite-regions.mjs",
 		"geo:regions": "node scripts/concat-regions.mjs",
-		"dev": "set NODE_ENV=development&& run-p watch:js watch:css start:server",
 		"start:server": "node scripts/server.mjs",
 		"watch:css": "npm run build:css -- --watch --verbose",
-		"watch:js": "rollup --config .config/rollup.config.js -w",
-		"watch:html": "onchange -v *.html assets/design.css -e assets/*.html -- npm run build:html"
+		"watch:html": "onchange -v *.html assets/design.css -e assets/*.html -- npm run build:html",
+		"watch:js": "npm run build:js -- --watch"
 	},
 	"devDependencies": {
 		"@bpanchenko/uikit": "3.5.14",
