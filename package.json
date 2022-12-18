@@ -1,7 +1,7 @@
 {
 	"name": "moscow.borders",
 	"description": "Russia Border Site",
-	"version": "0.4.8",
+	"version": "0.4.9",
 	"private": true,
 	"type": "module",
 	"main": "index.html",
