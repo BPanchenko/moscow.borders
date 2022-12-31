@@ -1,6 +1,6 @@
 export default {
 	applyCSSLive: true,
-	domain: 'local.russia.protosite.rocks',
+	domain: 'local.borders.moscow',
 	exts: [ 'html', 'css', 'js', 'mjs', 'ico', 'svg', 'ttf', 'woff', 'woff2', 'json' ],
 	root: '.',
 	ports: {
