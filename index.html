@@ -16,71 +16,69 @@
         <script src="./assets/core.mjs" type="module" defer></script>
     </head>
     <body>
-		<header class="o-header o-container">
-			<div>
-				<figure class="c-flag">
-					<img src="./source/pictures/emblem.svg" class="c-picture c-picture--emblem" alt="герб Российской Федерации">
-					<img src="./source/pictures/flag.svg" class="c-picture c-picture--flag s-shadow-2dp" alt="флаг Российской Федерации">
-				</figure>
-			</div>
-			<div>
-				<h1>
-					Административно-территориальные границы Российской Федерации<br>
-					с присоединенными территориями<br>
-					в форматах SVG и GeoJSON
-				</h1>
-			</div>
-		</header>
-        <main>
-			<section class="o-map js-map">
-				<c-map data-url="./assets/russia-regions.min.geojson" class="o-map__display js-map-display"></c-map>
-				<section class="o-map__settings js-map-settings">
-					<label>
-						Проекция:
-						<select name="projection">
-							<option value="albers">Альберса</option>
-							<option value="mercator">Меркатора</option>
-						</select>
-					</label>
-					<label>
-						<input type="radio" name="regions" value="0">
-						граница Российской Федерации
-					</label>
-					<label>
-						<input type="radio" name="regions" value="1">
-						границы регионов России
-					</label>
+		<div class="o-container">
+			<header class="o-header">
+				<div>
+					<figure class="c-flag">
+						<img src="./source/pictures/emblem.svg" class="c-picture c-picture--emblem" alt="герб Российской Федерации">
+						<img src="./source/pictures/flag.svg" class="c-picture c-picture--flag s-shadow-2dp" alt="флаг Российской Федерации">
+					</figure>
+				</div>
+				<div>
+					<h1>
+						Административно-территориальные границы Российской Федерации<br>
+						с присоединенными территориями<br>
+						в форматах SVG и GeoJSON
+					</h1>
+				</div>
+			</header>
+			<main>
+				<section class="o-map js-map">
+					<c-map data-url="./assets/russia-regions.min.geojson" class="o-map__display js-map-display"></c-map>
+					<section class="o-map__settings js-map-settings">
+						<label>
+							Проекция:
+							<select name="projection">
+								<option value="albers">Альберса</option>
+								<option value="mercator">Меркатора</option>
+							</select>
+						</label>
+						<label>
+							<input type="radio" name="regions" value="0">
+							граница Российской Федерации
+						</label>
+						<label>
+							<input type="radio" name="regions" value="1">
+							границы регионов России
+						</label>
+					</section>
 				</section>
-			</section>
-			<section class="o-cloud js-cloud">
-				<section class="c-toolbar u-margin-md-top">
-					<i data-glyph="cloud-transfer-download"></i>
-					<button class="c-button">.PNG</button>
-					<a href="./assets/russia-regions.svg" class="c-button js-ctrl-svg">.SVG</a>
-					<a href="./assets/russia-regions.min.geojson" class="c-button js-ctrl-geojson" download="russia-regions.geojson">.GeoJSON</a>
+				<section class="o-cloud js-cloud">
+					<section class="c-toolbar s-rounded u-margin-md-top">
+						<i data-glyph="cloud-transfer-download"></i>
+						<button class="c-button js-btn-png">PNG</button>
+						<button class="c-button js-btn-svg">SVG</button>
+						<button class="c-button js-btn-geojson">GeoJSON</button>
+					</section>
 				</section>
-			</section>
-		</main>
-		<br><br><br>
-		<footer class="o-footer o-container">
-			<div class="o-footer__col"></div>
-			<div class="o-footer__col u-text-right">
-				<div class="s-cursive u-text-xl">
-					&copy;
-					<a
-						href="https://petrovacademy.ru/"
-						title="Академия хоккея им. В.В. Петрова"
-						class="s-floating"
-					>Сделано в Красногорске</a>, 2023
+			</main>
+			<br><br><br>
+			<footer class="o-footer">
+				<div class="o-footer__copyright s-cursive s-lg">
+						&copy;
+						<a
+							href="https://petrovacademy.ru/"
+							title="Академия хоккея им. В.В. Петрова"
+							class="s-floating"
+						>Сделано в Красногорске</a>, 2023
 				</div>
-				<div class="u-margin-top">
-					Государственная символика: <a href="http://www.flag.kremlin.ru/emblem/">http://www.flag.kremlin.ru/emblem</a>
+				<div class="o-footer__links">
+					Государственная символика: <a href="http://www.flag.kremlin.ru/emblem/" class="s-floating">http://www.flag.kremlin.ru/emblem</a>
+					<br>
+					Исходники: <a href="https://github.com/BPanchenko/moscow.borders" class="s-floating">https://github.com/BPanchenko/moscow.borders</a>
 				</div>
-				<div class="u-margin-xs-top">
-					Исходники: <a href="https://github.com/BPanchenko/moscow.borders">https://github.com/BPanchenko/moscow.borders</a>
-				</div>
-			</div>
-		</footer>
-		<br><br><br>
+			</footer>
+			<br><br><br>
+		</div>
     </body>
 </html>
