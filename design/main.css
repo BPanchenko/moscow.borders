@@ -3,9 +3,7 @@
 /* purgecss start ignore */
 
 /* Custom Modules
- ======================================================================== */
-
-@import url("http://assets.protosite.rocks/fonts/itc-franklin-gothic/stylesheet.css");
+========================================================================= */
 
 @import "./components/flag.css";
 @import "./components/map.css";
@@ -15,19 +13,22 @@
 @import "./objects/header.css";
 @import "./objects/settings.css";
 
+
 /* Reset Typeface Settings
- ======================================================================== */
+========================================================================= */
+
+@import url("http://assets.protosite.rocks/fonts/itc-franklin-gothic/stylesheet.css");
 
 :root {
-	--font-secondary: 'ITCFranklinGothicWebMedium', sans-serif;
-	--text-xl: 2.4rem;
+	--caption-font: 'ITCFranklinGothicWebMedium', sans-serif;
 }
+
 
 /* Document
  ======================================================================== */
 
 body {
-	background-color: var(--clr-green-grey-50);
+	background-color: var(--clr-amber-50);
 }
 
 /* purgecss end ignore */
